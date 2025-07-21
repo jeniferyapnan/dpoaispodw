@@ -15,7 +15,7 @@ app.get('/api/kakros', (req, res) => {
       return res.status(500).json({ error: 'Gagal mengambil data.' });
     }
     const database = JSON.parse(data);
-    const images = database.jkt48;
+    const images = database.kakros;
     if (!images || images.length === 0) {
       return res.status(404).json({ error: 'Database gambar kosong.' });
     }
@@ -30,7 +30,7 @@ app.get('/api/kakros', (req, res) => {
 
 // Endpoint buat ngetes
 app.get('/', (req, res) => {
-  res.send('Server API JKT48 buat Vercel udah nyala!');
+  res.send('Server API kakros buat Vercel udah nyala!');
 });
 
 // Jalanin servernya (Vercel bakal ngurus ini secara otomatis)
