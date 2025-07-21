@@ -7,7 +7,7 @@ const app = express();
 const PORT = 3000;
 
 // Bikin endpoint utama
-app.get('/api/jkt48', (req, res) => {
+app.get('/api/kakros', (req, res) => {
   // Baca file 'db.json'
   fs.readFile('db.json', 'utf8', (err, data) => {
     if (err) {
